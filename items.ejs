@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do Items</title>
+    <style>
+        li{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Your work has been added succesfully</h2>
+       <%for(let i=0;i<array.length;i++){%>
+        <ol>
+            <li><%=array[i]+"\n"%></li>
+        </ol>
+       <%}%>
+    <%-include("index.ejs")%>
+    <%-include("delete.ejs")%>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoApp</title>
+    <style>
+        *{
+            background-color: gray;
+        }
+        h1{
+            background-color: blue;
+            color: black;
+            text-align: center;
+        }
+        .Additem{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <%if(locals.item){%>
+        Your To-Do list is ready
+        <%=item%>
+    <%}else{%>
+        <form action="/submit" method="POST">
+            <div class="header">
+                <h1>To Do App</h1>
+            </div>
+            <div class="Additem">
+                <label for="Additem">Add Item</label>
+                <input type="text" name="Additem" placeholder="Add Item">
+                <input type="submit" value="Add">
+            </div>
+        </form>    
+    <%}%>
+</body>
+</html>
